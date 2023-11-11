@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "设计要求.md",
+                "file": "reference/PM07.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "设计要求.md",
+                "file": "reference/PM07.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "设计要求.md",
+                "file": "reference/PM07.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "设计要求.md"
+                "file": "reference/PM07.md"
               }
             }
           }
@@ -148,11 +148,11 @@
   },
   "active": "0fa488e3632d1bc6",
   "lastOpenFiles": [
+    "设计要求.md",
+    "README.md",
     "image/设计要求/1699706743669.png",
     "reference/PM07.md",
     "reference/Holybr PM06V2.md",
-    "reference/阿木 无人机供电板.md",
-    "设计要求.md",
-    "README.md"
+    "reference/阿木 无人机供电板.md"
   ]
 }
