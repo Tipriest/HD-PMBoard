@@ -10,7 +10,7 @@
 
 ### 2. 设计要求分析
 
-1. 12V是用来给Nvidia的系列模组供电的，根据目前(2023.11.11)的各个模组的功耗情况，可以得知**Jeston AGX Origin 64GB**需要15W-60W的电源，所以保险起见需要提供12V/7.5A 一路电源 *[Reference](https://www.nvidia.com/en-sg/autonomous-machines/embedded-systems/jetson-orin/)*
+1. 12V是用来给Nvidia的系列模组供电的，根据目前(2023.11.11)的各个模组的功耗情况，可以得知**Jeston AGX Origin 64GB**需要15W-60W的电源，所以保险起见需要提供12V/7.5A=90W的一路电源 *[Reference](https://www.nvidia.com/en-sg/autonomous-machines/embedded-systems/jetson-orin/)*
 2. 5V是用来给飞控供电的，飞控5V/5A 一路
 
 <div align=center><img src="image/README/1699704447345.png" width="250"></div>
@@ -24,16 +24,33 @@
 >
 > <div align=center><img src="image/README/1699706743669.png" width="450"></div>
 
-> * PowerA，采用25mr采样电阻，提供电流的ADC模拟采样值，采用，提供电源的输入电压
 > * 飞控的电源输入的正常的6pin线序为下图所示，具有VOL和CUR，分别表示输入电压和输入电流
->
 > <div align=center><img src="image/README/1699710642984.png" width="450"></div>
 
-### 3. 验证方法和测试代码
+### 3. 方案选型
+> * 采用PowerA端口，提供ADC信息
+> * 电流采样: 采用2.5mr采样电阻，采用INA240A1进行20倍增益放大，输出模拟电流采样值，安培/伏特选择20
+> * 电压采样: 采用TLV2372IDR运放，采样电源的输入电压，电压分压器选择10
+> <div align=center><img src="image/README/1699766607995.png" width="300"></div>
+> 
+> * 转压芯片选型
+> 
+> |芯片名称|厂家|输入电压范围|输出电压范围|输出电流max|优缺点|
+> | :---  | :----: | :---: |:---:      | :---:     |  :---:   |
+> | LT8645SIV#PBF | ADI(亚德诺) | 3.4V-65V| 1.8V~12V| 8A |49.15/片 难焊 |
+> | SIC461ED-T1-GE3 | VISHAY(威世)| 4.5V-60V | 800mV~55.2V |10A | 14.02/片 正常焊 |
+> | SIC471ED-T1-GE3 | VISHAY(威世)| 4.5V-55V | 800mV~50.6V |12A | 17.65/片 正常焊 |
+> | FAN65008B | onsemi(安森美)| 4.5V-65V | 600mV~32.5V |10A | 32/片 正常焊 |
+>
+> * 采用SIC461ED-T1-GE3进行 **输入电压** 转 **12V** ，效率在96-97%
+> * 采用SIC461ED-T1-GE3进行 **输入电压** 转 **5V** ，效率在94-95%
+
 
 ### 3.可能发生的最坏的事情
 
 1. 12V转压故障，导致12V直出电源电压烧坏后级电脑、无人机炸机
+2. 飞控6pin引脚线序画反导致烧飞控
+3. 飞控模拟电压采样出问题烧飞控
 
 Some Qs
 
@@ -41,4 +58,3 @@ Some Qs
 2. 
 
 <div align=center><img src="image/README/1699541342838.png" width="450"></div>
-
