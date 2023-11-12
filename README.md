@@ -25,16 +25,19 @@
 > <div align=center><img src="image/README/1699706743669.png" width="450"></div>
 
 > * 飞控的电源输入的正常的6pin线序为下图所示，具有VOL和CUR，分别表示输入电压和输入电流
+>
 > <div align=center><img src="image/README/1699710642984.png" width="450"></div>
 
 ### 3. 方案选型
+>
 > * 采用PowerA端口，提供ADC信息
-> * 电流采样: 采用0.25mr采样电阻，采用INA240A1进行200倍增益放大，输出模拟电流采样值，安培/伏特选择20
-> * 电压采样: 采用TLV2372IDR运放，采样电源的输入电压，电压分压器选择10
+> * 电流采样: 采用0.25mr采样电阻，采用INA240A3进行100倍增益放大，输出模拟电流采样值，安培/伏特写入40
+> * 电压采样: 采用OPA171AIDBVR运放，采样电源的输入电压，电压分压器写入16
+>
 > <div align=center><img src="image/README/1699766607995.png" width="300"></div>
-> 
+>
 > * 转压芯片选型
-> 
+>
 > |芯片名称|厂家|输入电压范围|输出电压范围|输出电流max|优缺点|
 > | :---  | :----: | :---: |:---:      | :---:     |  :---:   |
 > | LT8645SIV#PBF | ADI(亚德诺) | 3.4V-65V| 1.8V~12V| 8A |49.15/片 难焊 |
@@ -45,8 +48,31 @@
 > * 采用SIC461ED-T1-GE3进行 **输入电压** 转 **12V** ，效率在96-97%
 > * 采用SIC461ED-T1-GE3进行 **输入电压** 转 **5V** ，效率在94-95%
 
+### 4.原理图及PCB
 
-### 3.可能发生的最坏的事情
+#### 4.1 原理图
+
+<div align=center><img src="image/README/1699814780938.png" width="600"></div>
+
+#### 4.2 PCB
+
+<center class="half">
+    <img src="image/README/1699814827287.png" width="300"/><img src="image/README/1699814835971.png" width="302.5"/>
+</center>
+<center class="half">
+    <img src="image/README/1699814843091.png" width="300"/><img src="image/README/1699814850476.png" width="303.5"/>
+</center>
+
+<center class="half">
+    <img src="image/README/1699815164828.png" width="299"/><img src="image/README/1699815175712.png" width="306.5"/>
+</center>
+
+### 5.待办
+
+1. 12V转压相关的东西还要计算
+2. 想办法把搭桥的那个0欧姆电阻给换掉，优化一下布局
+
+### 6.可能发生的最坏的事情
 
 1. 12V转压故障，导致12V直出电源电压烧坏后级电脑、无人机炸机
 2. 飞控6pin引脚线序画反或者接线反导致烧飞控
@@ -55,6 +81,6 @@
 Some Qs
 
 1. 孔间距是30.50mm, 但是孔大小看了一些发现有3mm的，有4mm的，所以到底采用哪一种比较好，现在是3mm
-2. 
+2.
 
 <div align=center><img src="image/README/1699541342838.png" width="450"></div>
