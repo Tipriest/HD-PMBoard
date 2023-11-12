@@ -55,7 +55,21 @@
 <div align=center><img src="image/README/1699814780938.png" width="600"></div>
 
 #### 4.2 PCB
+<div style="text-align:center">
 
+<span style="width:30%;display:inline-block">
+
+![长图一 alt](https://source.casecori.top/img/img-1.webp)
+
+</span>
+
+<span style="width:30%;display:inline-block">
+
+![图二](https://source.casecori.top/img/img-2.webp)
+
+</span>
+
+</div>
 <center class="half">
     <img src="image/README/1699814827287.png" width="300"/><img src="image/README/1699814835971.png" width="302.5"/>
 </center>
@@ -78,7 +92,7 @@
 2. 飞控6pin引脚线序画反或者接线反导致烧飞控
 3. 飞控模拟电压采样出问题烧飞控
 
-Some Qs
+### Some Qs
 
 1. 孔间距是30.50mm, 但是孔大小看了一些发现有3mm的，有4mm的，所以到底采用哪一种比较好，现在是3mm
 2.
