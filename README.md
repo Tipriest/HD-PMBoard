@@ -55,21 +55,10 @@
 <div align=center><img src="image/README/1699814780938.png" width="600"></div>
 
 #### 4.2 PCB
-<div style="text-align:center">
 
-<span style="width:30%;display:inline-block">
+<div align=center><img src="image/README/1699814827287.png" width="301.5"><img src="image/README/1699814835971.png" width="303.5"></div>
 
-![长图一 alt](https://source.casecori.top/img/img-1.webp)
 
-</span>
-
-<span style="width:30%;display:inline-block">
-
-![图二](https://source.casecori.top/img/img-2.webp)
-
-</span>
-
-</div>
 <center class="half">
     <img src="image/README/1699814827287.png" width="300"/><img src="image/README/1699814835971.png" width="302.5"/>
 </center>
