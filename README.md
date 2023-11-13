@@ -58,17 +58,10 @@
 
 <div align=center><img src="image/README/1699814827287.png" width="301.5"><img src="image/README/1699814835971.png" width="303.5"></div>
 
+<div align=center><img src="image/README/1699814843091.png" width="299.9"><img src="image/README/1699814850476.png" width="303.5"></div>
 
-<center class="half">
-    <img src="image/README/1699814827287.png" width="300"/><img src="image/README/1699814835971.png" width="302.5"/>
-</center>
-<center class="half">
-    <img src="image/README/1699814843091.png" width="300"/><img src="image/README/1699814850476.png" width="303.5"/>
-</center>
+<div align=center><img src="image/README/1699815164828.png" width="296"><img src="image/README/1699815175712.png" width="303.5"></div>
 
-<center class="half">
-    <img src="image/README/1699815164828.png" width="299"/><img src="image/README/1699815175712.png" width="306.5"/>
-</center>
 
 ### 5.待办
 
