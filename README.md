@@ -56,7 +56,7 @@
 
 #### 4.1 原理图
 
-<div align=center><img src="image/README/1699814780938.png" width="1000"></div>
+<div align=center><img src="image/README/sch0203_01.png" width="1000"></div>
 
 #### 4.2 PCB
 
